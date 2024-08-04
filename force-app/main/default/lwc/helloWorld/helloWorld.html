@@ -1,0 +1,42 @@
+<template>
+
+    <lightning-card  title="Single Way - binding">
+        <div class="slds-var-m-left_small">
+            {fullname}
+        </div>
+    </lightning-card>
+
+    <lightning-card  title="Two - way data binding">
+        <div class="slds-var-m-top_medium slds-var-m-bottom_x-large">
+
+            <!-- Default/basic -->
+            <div class="slds-var-p-around_medium lgc-bg">
+                <lightning-input type="text" label="Enter some text" onkeyup={changeHandler}></lightning-input>
+            </div>
+            <div class="slds-var-m-left_small">
+                this is the content is change on two way bonding -> {content}
+            </div>
+            
+            <div>
+                {arr1st}
+            </div>
+        </div>
+    </lightning-card>
+
+    <lightning-card  title="for each loop demo">
+
+        <template for:each = {nameList} for:item="name">
+            <div key={name}>{name}</div>
+        </template>
+    </lightning-card>
+
+
+    <lightning-card title="iterator">
+        <div> we are choosing the iterator over the for loop because iterator has the special property that can handle the 1st and last element</div>
+
+        <template iterator:name={nameList}>
+            <div key = {name.value}></div>
+        </template>
+
+    </lightning-card>
+</template> 

@@ -1,0 +1,8 @@
+<template>
+    <lightning-card title="Parent Component">
+        <lightning-input type="text" variant="standard" label="Enter Name" onchange={handleChange}></lightning-input>  
+        <lightning-button label="submit" onclick={handleClick}></lightning-button>
+    </lightning-card>
+
+    <c-child-component parent = {dispatch}></c-child-component>
+</template>

@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="child component">
+            <lightning-button 
+                variant="base" 
+                label="Substract" 
+                icon-name="utility:dash" 
+                onclick={handleSub} >
+            </lightning-button>  
+            <lightning-button 
+                variant="base" 
+                label="Add" 
+                icon-name="utlity:add"
+                onclick={handleAdd}>
+            </lightning-button>  
+            <lightning-button 
+                variant="base" 
+                label="Multiply"
+                value="3"
+                icon-name="utlity:close"
+                onclick={handleMultiplication}>
+            </lightning-button> 
+    </lightning-card>
+</template>

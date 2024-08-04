@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Life cycle hooks">
+
+            <span>
+                <template if:true={child}>
+                    <button class="slds-button slds-button_brand slds-m-left_xx-small" onclick={callTheChildComponent}> Show Child</button>
+                </template>
+            </span>
+            <span>
+                <template if:false={child}>
+                    <button class="slds-button slds-button_brand slds-m-left_xx-small" onclick={callTheChildComponent}> hide Child</button>
+                </template>
+            </span>
+        
+    </lightning-card>
+    
+    <template if:true={child}>
+        <c-life-cycle-hooks-child-component></c-life-cycle-hooks-child-component>
+    </template>
+</template>

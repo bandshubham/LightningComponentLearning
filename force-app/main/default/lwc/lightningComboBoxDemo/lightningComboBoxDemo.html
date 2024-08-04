@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Combo Box Demo">
+        <lightning-combobox
+            name = "Records"
+            label = "Account Records"
+            value = {valueToselect}
+            placeholder = "Select Account"
+            options = {accOptions}
+            onchange = {handleChange}
+            >
+        </lightning-combobox>
+
+        selected value is : {valueToselect}
+
+    </lightning-card>
+</template>

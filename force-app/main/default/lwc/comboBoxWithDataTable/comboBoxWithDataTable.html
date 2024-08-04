@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="Comobox with Data table">
+        <lightning-combobox
+            name="Account Records"
+            label="Status"
+            value={values}
+            placeholder="Select Account"
+            options={accountOptions}
+            onchange={handleChange} >
+        </lightning-combobox>
+
+        <template if:true = {isVisiable}>
+            <div style="height: 300px;">
+                <lightning-datatable
+                        key-field="Id"
+                        data={data}
+                        columns={column}>
+                </lightning-datatable>
+            </div>
+        </template>
+
+    </lightning-card>
+</template>

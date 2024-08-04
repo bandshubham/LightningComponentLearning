@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Child to Parent Communication">
+        <lightning-card title="Parent LWC Component" icon-name="standard:account">
+            <p class="slds-text-align_center">Count:{countVal}</p>
+        </lightning-card>
+        <c-child-component-for-communication 
+            onsub={handleSubstract} 
+            onadd={handleAddition}
+            onmultiply = {handleMultiplication}
+        >
+        </c-child-component-for-communication>
+    </lightning-card>
+</template>

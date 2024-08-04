@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Quiz App">
+    
+        <template for:each={myQuestion} for:item="quiz">
+                <div class = "" key={quiz.id}>{quiz.id} - {quiz.question}
+                    <ol class="slds-list_ordered">
+                        <li type="radio" >{quiz.answers.a}</li>
+                        <li type="radio" >{quiz.answers.b}</li>
+                    </ol>
+                </div>
+        </template>
+    </lightning-card>
+</template>

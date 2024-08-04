@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Conditional rendering demo">
+
+        <lightning-button variant="brand"
+                          label={labelVal} 
+                          onclick={handleClick}>
+        </lightning-button>
+
+        <template if:true= {showImage}>
+            <div>
+                <img src={getImage} alt="glass image">
+            </div>
+        </template>
+
+    </lightning-card>
+</template>
