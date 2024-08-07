@@ -1,5 +1,22 @@
 <template>
     <lightning-card title="Child Component">
         {parent}
+            <div class="slds-size_3-of-4">
+                <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small">Carousel With disable-auto-scroll Attribute
+                <lightning-carousel disable-auto-scroll>
+
+                    <template for:each={crousalDetails} for:item="item">
+                        <lightning-carousel-image
+                        key = {item.header}
+                        src = {item.src}
+                        header = {item.header}
+                        description = {item.description} 
+                        >
+                        </lightning-carousel-image>
+                    </template>
+                    
+                </lightning-carousel>
+                </div>
+          </div>
     </lightning-card>
 </template>
