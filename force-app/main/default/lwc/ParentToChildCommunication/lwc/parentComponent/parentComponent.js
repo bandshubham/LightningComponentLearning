@@ -3,6 +3,7 @@ import { LightningElement } from 'lwc';
 export default class ParentComponent extends LightningElement {
     name;
     dispatch;
+    sliderVal;
     crousalData = [
         {
             src : "https://www.lightningdesignsystem.com/assets/images/carousel/carousel-01.jpg",
@@ -33,6 +34,13 @@ export default class ParentComponent extends LightningElement {
         console.log('dispatch value from parent=>',this.dispatch);
     }
 
+    inputHandler(event){
+        this.sliderVal = event.target.value;
+        console.log(this.sliderVal);
+    }
 
+    handleSubmit(){
+       this.template.querySelector('c-child-component-calling-method').setSliderComponentValue(this.sliderVal);
+    }
 
 }
